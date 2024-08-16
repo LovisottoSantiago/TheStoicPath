@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-
+<html xmlns:th="http://www.thymeleaf.org">
 <head>
     <meta charset="UTF-8">
     <link href="styles.css" rel="stylesheet" type="text/css">
@@ -9,6 +9,6 @@
 <body>
     <h1>Welcome to The Stoic Path!</h1>
     <p>We're glad to have you here. We are working to finish this website as soon as possible.</p>
-    <a href="#explore" class="button">Click if you read this</a>
+    <p th:text="${phrase}"></p>+
 </body>
-
+</html>
