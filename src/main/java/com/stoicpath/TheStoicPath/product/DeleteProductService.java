@@ -13,4 +13,6 @@ public class DeleteProductService implements Command<Void, String> {
        return ResponseEntity.status(HttpStatus.NO_CONTENT).body("Product deleted");
     }
     
+    
+    
 }
