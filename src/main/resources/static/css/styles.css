@@ -1,0 +1,104 @@
+:root {
+    --backgroundColor: radial-gradient(circle, #F1F2F4, #E9ECEF, #F5F6F7);
+    --black: #000000;
+    --white: #ffffff;
+    --softGold: #D4B483;
+    --darkGrey: #363636;
+    --mutedBlue: #627D98;
+    --earthyBrown: #8C746A;
+}
+
+/* Regular */
+@font-face {
+    font-family: VisueltPro;
+    src: url(/src/main/resources/static/fonts/VisueltPro-Regular.woff) format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+/* Bold */
+@font-face {
+    font-family: VisueltPro;
+    src: url(/src/main/resources/static/fonts/VisueltPro-Bold.woff) format('woff');
+    font-weight: bold;
+    font-style: normal;
+}
+
+/* Light Italic */
+@font-face {
+    font-family: VisueltPro;
+    src: url(/src/main/resources/static/fonts/VisueltPro-LightItalic.woff) format('woff');
+    font-weight: normal;
+    font-style: italic;
+}
+
+/* Bold Italic */
+@font-face {
+    font-family: VisueltPro;
+    src: url(/src/main/resources/static/fonts/VisueltPro-BoldItalic.woff) format('woff');
+    font-weight: bold;
+    font-style: italic;
+}
+
+body {
+    background: var(--backgroundColor);
+    color: var(--black);
+    text-align: center;
+    padding: 3.125rem;
+    font-family: VisueltPro, sans-serif;
+}
+
+/* List styles - START */
+nav {
+    margin-top: -2.5rem;
+    margin-bottom: -2.5rem;
+}
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: var(--backgroundColor);
+}
+
+li {
+    float: left;
+}
+
+li a {
+    display: block;
+    color: var(--darkGrey);
+    text-align: center;
+    padding: .875rem 1rem;
+    text-decoration: none;
+    font-weight: 500;
+    text-shadow: none;
+}
+
+li a:hover {
+    text-shadow: 0 0 .0825rem var(--darkGrey); /* Creates a bold-like effect */
+}
+
+/* List styles - FINISH */
+
+h1 {
+    font-size: 8rem;
+    font-weight: 700;
+    margin-bottom: 0.8rem;
+    color: var(--black);
+}
+
+#TitleHr {
+    border: 1.5px solid var(--darkGrey);
+}
+
+#quote {
+    color: var(--black);
+    font-size: 1.2em;
+}
+
+p {
+    font-size: 1.2em;
+    margin-bottom: 1.875rem;
+}
