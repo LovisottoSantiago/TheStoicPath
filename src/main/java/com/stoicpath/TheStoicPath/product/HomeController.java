@@ -9,11 +9,11 @@ import org.springframework.web.bind.annotation.GetMapping;
 public class HomeController {
 
     @Autowired
-    private StoicPhrases phraseService;
+    private StoicPhrases stoicPhrases;
 
     @GetMapping("/")
     public String home(Model model) {
-        model.addAttribute("phrase", phraseService.getRandomPhrase());
+        model.addAttribute("phrase", stoicPhrases.getRandomPhrase());
         return "index";
     }
 }
