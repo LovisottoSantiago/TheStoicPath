@@ -12,14 +12,14 @@
 /* Add responsive styles */
 .menu-icon {
     display: none;
-    font-size: 2rem;
+    font-size: 32px;
     cursor: pointer;
-    padding: 1rem;
+    padding: 16px;
     color: var(--darkGrey);
 }
 
 /* Show the menu icon and hide the navbar when screen is smaller */
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 48rem) {
     ul {
         display: none;
         flex-direction: column;
@@ -47,12 +47,12 @@ body {
     background: var(--backgroundColor);
     color: var(--black);
     text-align: center;
-    padding: 3.125rem;
+    padding: 50px;
     font-family: VisueltPro, sans-serif;
 }
 
 nav {
-    margin-top: -2.5rem;
+    margin-top: -40px;
 }
 
 ul {
@@ -71,26 +71,34 @@ li a {
     display: block;
     color: var(--darkGrey);
     text-align: center;
-    padding: .875rem 1rem;
+    padding: 14px 16px;
     text-decoration: none;
     font-weight: 500;
     text-shadow: none;
 }
 
 li a:hover {
-    text-shadow: 0 0 .0825rem var(--darkGrey); /* Creates a bold-like effect */
+    text-shadow: 0 0 1.32px var(--darkGrey); /* Creates a bold-like effect */
 }
 
 h1 {
     font-size: 10vw; /* The title font size adjusts to 10% of the viewport width */
     font-weight: 700;
-    margin-top: 2.5rem;
-    margin-bottom: 0.8rem;
+    margin-top: 40px;
+    margin-bottom: 12.8px;
     color: var(--black);
 }
 
 #TitleHr {
-    border: 1.5px solid var(--darkGrey);
+    border: .0938rem solid var(--darkGrey);
+}
+
+#Subtitle {
+    max-width: 800px;
+    display: flex;
+    margin: auto;
+    align-items: center;
+    align-content: center;
 }
 
 #quote {
@@ -98,7 +106,15 @@ h1 {
     font-size: 1.2em;
 }
 
+#Presentation {
+    display: grid;
+    gap: 1rem;
+    grid-auto-rows: 22rem;
+    grid-template-columns: repeat(auto-fill, minmax(25rem, 1fr));
+    background: var(--softGold);
+}
+
 p {
     font-size: 1.2em;
-    margin-bottom: 1.875rem;
+    margin-bottom: 30px;
 }
