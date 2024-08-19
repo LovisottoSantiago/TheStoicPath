@@ -1,3 +1,4 @@
+/* General Styles */
 :root {
     --backgroundColor: radial-gradient(circle, #F1F2F4, #E9ECEF, #F5F6F7);
     --black: #000000;
@@ -8,38 +9,40 @@
     --earthyBrown: #8C746A;
 }
 
-/* Regular */
-@font-face {
-    font-family: VisueltPro;
-    src: url(/fonts/VisueltPro-Regular.woff) format('woff');
-    font-weight: normal;
-    font-style: normal;
+/* Add responsive styles */
+.menu-icon {
+    display: none;
+    font-size: 2rem;
+    cursor: pointer;
+    padding: 1rem;
+    color: var(--darkGrey);
 }
 
-/* Bold */
-@font-face {
-    font-family: VisueltPro;
-    src: url(/fonts/VisueltPro-Bold.woff) format('woff');
-    font-weight: bold;
-    font-style: normal;
+/* Show the menu icon and hide the navbar when screen is smaller */
+@media screen and (max-width: 768px) {
+    ul {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+    }
+
+    li {
+        float: none;
+        width: 100%;
+        text-align: center;
+    }
+
+    .menu-icon {
+        display: block;
+    }
 }
 
-/* Light Italic */
-@font-face {
-    font-family: VisueltPro;
-    src: url(/fonts/VisueltPro-LightItalic.woff) format('woff');
-    font-weight: normal;
-    font-style: italic;
+/* Display the navbar when the menu icon is clicked */
+ul.active {
+    display: flex;
 }
 
-/* Bold Italic */
-@font-face {
-    font-family: VisueltPro;
-    src: url(/fonts/VisueltPro-BoldItalic.woff) format('woff');
-    font-weight: bold;
-    font-style: italic;
-}
-
+/* Regular Styles */
 body {
     background: var(--backgroundColor);
     color: var(--black);
@@ -48,10 +51,8 @@ body {
     font-family: VisueltPro, sans-serif;
 }
 
-/* List styles - START */
 nav {
     margin-top: -2.5rem;
-    margin-bottom: -2.5rem;
 }
 
 ul {
@@ -80,11 +81,10 @@ li a:hover {
     text-shadow: 0 0 .0825rem var(--darkGrey); /* Creates a bold-like effect */
 }
 
-/* List styles - FINISH */
-
 h1 {
-    font-size: 8rem;
+    font-size: 10vw; /* The title font size adjusts to 10% of the viewport width */
     font-weight: 700;
+    margin-top: 2.5rem;
     margin-bottom: 0.8rem;
     color: var(--black);
 }
