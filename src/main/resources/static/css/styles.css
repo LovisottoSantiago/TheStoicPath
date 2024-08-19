@@ -11,7 +11,7 @@
 /* Regular */
 @font-face {
     font-family: VisueltPro;
-    src: url(/src/main/resources/static/fonts/VisueltPro-Regular.woff) format('woff');
+    src: url(/fonts/VisueltPro-Regular.woff) format('woff');
     font-weight: normal;
     font-style: normal;
 }
@@ -19,7 +19,7 @@
 /* Bold */
 @font-face {
     font-family: VisueltPro;
-    src: url(/src/main/resources/static/fonts/VisueltPro-Bold.woff) format('woff');
+    src: url(/fonts/VisueltPro-Bold.woff) format('woff');
     font-weight: bold;
     font-style: normal;
 }
@@ -27,7 +27,7 @@
 /* Light Italic */
 @font-face {
     font-family: VisueltPro;
-    src: url(/src/main/resources/static/fonts/VisueltPro-LightItalic.woff) format('woff');
+    src: url(/fonts/VisueltPro-LightItalic.woff) format('woff');
     font-weight: normal;
     font-style: italic;
 }
@@ -35,7 +35,7 @@
 /* Bold Italic */
 @font-face {
     font-family: VisueltPro;
-    src: url(/src/main/resources/static/fonts/VisueltPro-BoldItalic.woff) format('woff');
+    src: url(/fonts/VisueltPro-BoldItalic.woff) format('woff');
     font-weight: bold;
     font-style: italic;
 }

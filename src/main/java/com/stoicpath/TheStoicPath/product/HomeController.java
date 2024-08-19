@@ -11,9 +11,13 @@ public class HomeController {
     @Autowired
     private StoicPhrases stoicPhrases;
 
-    @GetMapping("/")
+    @GetMapping("/home")
     public String home(Model model) {
-        model.addAttribute("phrase", stoicPhrases.getRandomPhrase());
+        try {
+            model.addAttribute("phrase", stoicPhrases.getRandomPhrase());
+        } catch (Exception e) {
+            model.addAttribute("phrase", "An error occurred while fetching the phrase.");
+        }
         return "index";
     }
 }
