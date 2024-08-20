@@ -14,8 +14,7 @@
     <nav>
         <div class="menu-icon" onclick="toggleMenu()">
             <i class="fa fa-book" aria-hidden="true"></i>
-        </div>
-        
+        </div>        
         <ul id="navbar">
             <li style="float:left"><p id="quote" th:text="${phrase}"></p></li>
             <li style="float:right"><a href="#news">Help</a></li>
@@ -24,14 +23,13 @@
             <li style="float:right"><a class="active" href="#about">About</a></li>
         </ul>
     </nav>
+    
     <script>
         function toggleMenu() {
             var navbar = document.getElementById("navbar");
             navbar.classList.toggle("active");
         }
-    </script>
-
-        
+    </script>       
 
     <h1>The Stoic Path.</h1>
     <hr id="TitleHr">
@@ -39,10 +37,23 @@
         <p>"Your ultimate resource for Stoicism, mental health, journaling, happiness, productivity, relationships, and beyond."</p>
     </div>
 
-    <div id="Presentation">
-    </div>
+    <div class="MainNote">
+        <div>
+            <h2>Hello World!</h2>
+            <p>"Your ultimate resource for Stoicism, mental health, journaling, happiness, productivity, relationships, and beyond."
+            "Your ultimate resource for Stoicism, mental health, journaling, happiness, productivity, relationships, and beyond."</p>
+        </div>
+        <div>
+            <img src="/assets/bg1.png" alt="Presentation">
+        </div>
 
-    <section id="Container">
+    </div>
+    
+ 
+   
+    
+
+    <section class="Container">
         <div></div>
         <div></div>
         <div></div>

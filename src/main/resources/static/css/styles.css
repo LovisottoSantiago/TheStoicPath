@@ -8,6 +8,11 @@
     --mutedBlue: #627D98;
     --earthyBrown: #8C746A;
 }
+  
+  ::selection {
+    color: var(--softGold);
+    background: var(--earthyBrown);
+  }
 
 /* Add responsive styles */
 .menu-icon {
@@ -106,15 +111,42 @@ h1 {
     font-size: 1.2em;
 }
 
-#Presentation {
-    display: grid;
-    gap: 1rem;
-    grid-auto-rows: 22rem;
-    grid-template-columns: repeat(auto-fill, minmax(25rem, 1fr));
-    background: var(--softGold);
-}
-
 p {
     font-size: 1.2em;
-    margin-bottom: 30px;
 }
+
+.MainNote {
+    margin: auto;
+    display: flex;
+    width: 53.125rem;
+    flex-wrap: nowrap;
+    flex-direction: row;
+    justify-content: space-evenly;
+    background: var(--softGold);
+    padding: 1rem;
+}
+
+.MainNote img {
+    object-fit: cover;
+    width: 350px; /* Ensures the image doesn't get too large */
+    height: auto; /* Maintains the aspect ratio */
+    justify-self: center; /* Aligns the image to the right */
+    align-self: center; /* Centers the image vertically */
+}
+
+
+@media (max-width: 768px) {
+    .MainNote {
+        flex-wrap: wrap;
+    }
+    
+    .MainNote img{
+        width: auto;
+        height: 300px;
+        justify-self: center;
+        align-self: center;
+        margin-bottom: 16px;
+    }
+    
+}
+
