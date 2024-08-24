@@ -1,65 +1,65 @@
 <!DOCTYPE html>
 <html xmlns:th="http://www.thymeleaf.org">
-<head>
-    <meta charset="UTF-8">
-    <link href="/css/styles.css" rel="stylesheet" type="text/css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>The Stoic Path!</title>
-</head>
-<body>
-    <nav>
-        <div class="menu-icon" onclick="toggleMenu()">
-            <i class="fa fa-book" aria-hidden="true"></i>
-        </div>        
-        <ul id="navbar">
-            <li style="float:left"><p id="quote" th:text="${phrase}"></p></li>
-            <li style="float:right"><a href="#news">Help</a></li>
-            <li style="float:right"><a href="#contact">Blog</a></li>
-            <li style="float:right"><a class="active" href="#about">Quotes</a></li>
-            <li style="float:right"><a class="active" href="#about">About</a></li>
-        </ul>
-    </nav>
-    
-    <script>
-        function toggleMenu() {
-            var navbar = document.getElementById("navbar");
-            navbar.classList.toggle("active");
-        }
-    </script>       
+    <head>
+        <meta charset="UTF-8">
+        <link href="/css/styles.css" rel="stylesheet" type="text/css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>The Stoic Path!</title>
+    </head>
+    <body>
+        <nav>
+            <div class="menu-icon" onclick="toggleMenu()">
+                <i class="fa fa-book" aria-hidden="true"></i>
+            </div>        
+            <ul id="navbar">
+                <li style="float:left"><p id="quote" th:text="${phrase}"></p></li>
+                <li style="float:right"><a href="#news">Help</a></li>
+                <li style="float:right"><a href="#contact">Blog</a></li>
+                <li style="float:right"><a class="active" href="#about">Quotes</a></li>
+                <li style="float:right"><a class="active" href="#about">About</a></li>
+            </ul>
+        </nav>
 
-    <h1>The Stoic Path.</h1>
-    <hr id="TitleHr">
-    <div id="Subtitle">
-        <p>"Your ultimate resource for Stoicism, mental health, journaling, happiness, productivity, relationships, and beyond."</p>
-    </div>
+        <script>
+            function toggleMenu() {
+                var navbar = document.getElementById("navbar");
+                navbar.classList.toggle("active");
+            }
+        </script>       
 
-    <div class="MainNote">
-        <div id="MainNoteFirstDiv">
-            <h2>Hello World!</h2>
-            <p>"Your ultimate resource for Stoicism, mental health, journaling, happiness, productivity, relationships, and beyond."
-            "Your ultimate resource for Stoicism, mental health, journaling, happiness, productivity, relationships, and beyond."</p>
-        </div>
-        <div>
-            <img src="/assets/bg1.png" alt="Presentation">
+        <h1>The Stoic Path.</h1>
+        <hr id="TitleHr">
+        <div id="Subtitle">
+            <p>"Your ultimate resource for Stoicism, mental health, journaling, happiness, productivity, relationships, and beyond."</p>
         </div>
 
-    </div>
-    
- 
-   
-    
+        <div class="MainNote">
+            <div id="MainNoteFirstDiv">
+                <h2>Discover Your Path to Stoic Wisdom</h2>
+                <p style="margin-bottom: .3125rem;">Welcome to The Stoic Path!</p>
+                <p>Here, we blend ancient Stoic philosophy with modern life, offering insights into mental health, journaling, happiness, productivity, and relationships. Join us on a journey to cultivate a more thoughtful and fulfilling life through the timeless wisdom of Stoicism.</p>
+            </div>
+            <div>
+                <img src="/assets/bg1.png" alt="Presentation">
+            </div>
 
-    <section class="Container">
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-    </section>
+        </div>
 
-</body>
+
+
+
+
+        <section class="Container">
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+        </section>
+
+    </body>
 </html>

@@ -7,6 +7,7 @@
     --darkGrey: #363636;
     --mutedBlue: #627D98;
     --earthyBrown: #8C746A;
+    --radiusSize: 1.5625rem;
 }
   
   ::selection {
@@ -117,40 +118,53 @@ p {
 
 .MainNote {
     width: 800px;
+    border-radius: var(--radiusSize);
     margin: auto;
     display: flex;
     flex-wrap: nowrap;
     flex-direction: row;
     justify-content: space-evenly;
     background: var(--softGold);
-    padding: 1rem;
+    text-align: left;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.MainNote p {
+    margin: auto;
+    margin-right: .625rem;
 }
 
 .MainNote img {
     object-fit: cover;
+    border-bottom-right-radius: var(--radiusSize);
+    border-top-right-radius: var(--radiusSize);
     width: 350px; /* Ensures the image doesn't get too large */
     height: auto; /* Maintains the aspect ratio */
+    margin-bottom: -0.3125rem;
     justify-self: center; /* Aligns the image to the right */
     align-self: center; /* Centers the image vertically */
 }
 
 #MainNoteFirstDiv {
-    margin: auto;
-    margin-right: 20px;
-    margin-left: 20px;
+    margin: 1.25rem;
+    margin-top: 1rem;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 768px) { /* For phone sizes */
     .MainNote {
         flex-wrap: wrap;
         width: auto;
+        padding-left: 0;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        border-radius: var(--radiusSize);
     }    
     
     .MainNote img{
-        width: 250px;
+        width: 14.6875rem;
         height: auto;
-        margin-bottom: 10px;
-        margin-top: 5px;
+        margin-bottom: .625rem;
+        margin-top: .625rem;
+        border-radius: var(--radiusSize);
     }
     
 }
