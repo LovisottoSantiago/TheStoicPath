@@ -1,7 +1,7 @@
 /* General Styles */
 :root {
     --backgroundColor: radial-gradient(circle, #F1F2F4, #E9ECEF, #F5F6F7);
-    --whiteBG: #F1F2F4;
+    --whiteBG: #f9f9f9;
     --black: #000000;
     --white: #ffffff;
     --softGold: #D4B483;
@@ -154,18 +154,21 @@ p {
 @media (max-width: 768px) { /* For phone sizes */
     .MainNote {
         flex-wrap: wrap;
-        width: auto;
+        width: -webkit-fill-available;
         padding-left: 0;
         box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
         border-radius: var(--radiusSize);
     }    
     /*resize for phone*/
     .MainNote img{
-        width: 14.6875rem;
+        width: 16rem;
         height: auto;
-        margin-bottom: .625rem;
-        margin-top: .625rem;
+        margin-bottom: 1rem;
         border-radius: var(--radiusSize);
+    }
+
+    .MainNote p{
+        margin-right: 0px;
     }
     
 }
