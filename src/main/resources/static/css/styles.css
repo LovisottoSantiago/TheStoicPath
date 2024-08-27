@@ -3,6 +3,7 @@
     --backgroundColor: radial-gradient(circle, #F1F2F4, #E9ECEF, #F5F6F7);
     --whiteBG: #f9f9f9;
     --black: #000000;
+    --blackBG: #2d2d2d;
     --white: #ffffff;
     --softGold: #D4B483;
     --darkGrey: #363636;
@@ -173,5 +174,15 @@ p {
     
 }
 
+footer {
+    width: 100%;
+    background-color:var(--blackBG);
+    padding: 20px;
+    text-align: center;
+}
+
+footer p{
+    color: var(--whiteBG);
+}
 
 
