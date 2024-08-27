@@ -174,14 +174,14 @@ p {
     
 }
 
-footer {
+#End {
     width: 100%;
     background-color:var(--blackBG);
     padding: 20px;
     text-align: center;
 }
 
-footer p{
+#End  p{
     color: var(--whiteBG);
 }
 
