@@ -6,10 +6,10 @@
     --blackBG: #2d2d2d;
     --white: #ffffff;
     --softGold: #D4B483;
-    --darkGrey: #363636;
+    --darkGrey: #6b6b6b;
     --mutedBlue: #627D98;
     --earthyBrown: #8C746A;
-    --radiusSize: 1.5625rem;
+    --radiusSize: 0rem;
 }
   
   ::selection {
@@ -50,6 +50,22 @@ ul.active {
     display: flex;
 }
 
+/* Regular Font Weight */
+@font-face {
+    font-family: 'VisueltPro';    
+    src: url('/src/main/resources/static/fonts/VisueltPro-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+/* Bold Font Weight */
+@font-face {
+    font-family: 'VisueltPro';    
+    src: url('/src/main/resources/static/fonts/VisueltPro-Bold.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+}
+
 /* Regular Styles */
 body {
     background: var(--backgroundColor);
@@ -57,13 +73,14 @@ body {
     text-align: center;
     padding: 50px;
     font-family: VisueltPro, sans-serif;
+    font-weight: normal; /* Uses Regular weight */
 }
 
 nav {
     margin-top: -40px;
 }
 
-ul {
+nav ul {
     list-style-type: none;
     margin: 0;
     padding: 0;
@@ -71,29 +88,35 @@ ul {
     background-color: var(--backgroundColor);
 }
 
-li {
+nav li {
     float: left;
 }
 
-li a {
+nav li a {
     display: block;
     color: var(--darkGrey);
     text-align: center;
     padding: 14px 16px;
     text-decoration: none;
-    font-weight: 500;
+    font-weight: normal;
     text-shadow: none;
 }
 
-li a:hover {
-    text-shadow: 0 0 1.32px var(--darkGrey); /* Creates a bold-like effect */
+nav li a:hover {
+    color: var(--black);
 }
 
-h1 {
+h1, h2 {
+    font-family: 'VisueltPro', sans-serif;
+    font-weight: bold; /* Uses Bold weight */
+}
+
+#MainTitle h1 {
+    font-family: 'VisueltPro', sans-serif;
     font-size: 10vw; /* The title font size adjusts to 10% of the viewport width */
     font-weight: 700;
     margin-top: 40px;
-    margin-bottom: 12.8px;
+    margin-bottom: -5px;
     color: var(--black);
 }
 
@@ -110,16 +133,25 @@ h1 {
 }
 
 #quote {
-    color: var(--black);
+    color: var(--blackBG);
     font-size: 1.2em;
 }
 
+/* Paragraph Styles */
 p {
-    font-size: 1.2em;
+    font-family: 'VisueltPro', sans-serif;
+    font-weight: normal; /* Regular weight by default */
+    font-size: 1.2em; /* Adjust the size as needed */
+    color: var(--blackBG); /* Uses the defined variable color */
+}
+
+/* Bold Paragraphs */
+p.bold {
+    font-weight: bold; /* Uses Bold weight */
 }
 
 .MainNote {
-    width: 800px;
+    width: 50rem;
     border-radius: var(--radiusSize);
     margin: auto;
     display: flex;
@@ -171,20 +203,81 @@ p {
     .MainNote p{
         margin-right: 0px;
     }
-    
+
 }
 
-.footer {
-    position: fixed;
-    left: 0;
-    bottom: 0;
+footer {
+    margin-top: 25rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    background-color: var(--backgroundColor); /* Light grey background color */
+  }
+  
+  hr {
+    width: 80%;
+    margin-bottom: 10px;
+    border: none;
+    border-top: 1px solid var(--darkGrey); /* Grey border for the hr */
+  }
+  
+  .footer-content {
+    display: flex;
+    flex-direction: column; /* Stack title and text vertically */
+    align-items: center;
+    text-align: center; /* Center text within the footer */
     width: 100%;
-    background-color: var(--blackBG);
-    text-align: center;
-}
+  }
+  
+  .footer-content h2 {
+    margin: 0;
+    font-size: 1.5rem; /* Responsive font size */
+    color: var(--blackBG); /* Dark grey text color */
+  }
 
-.footer  p{
-    color: var(--whiteBG);
-}
+  .footer-content p {
+    margin: 8px 0; /* Small margin between the title and text */
+    font-size: 1rem; /* Base font size for the text */
+    color: var(--blackBG); /* Medium grey text color */
+  }
+  
+  .footer-content ul {
+    list-style-type: none; /* Remove default bullets */
+    padding: 0;
+    margin: 10px 0 0; /* Margin above the list */
+  }
+  
+  .footer-content li {
+    margin: 5px 0; /* Space between list items */
+    font-size: 1rem; /* Font size for list items */
+    color: #666; /* Medium grey text color */
+    
+  }
 
+
+.github-icon {
+    margin-top: 10px; /* Space above the icon */
+    font-size: 1.5rem; /* Icon size */
+    color: var(--blackBG); /* Dark grey color for the icon */
+    text-decoration: none; /* Remove underline */
+  }
+  
+  .github-icon:hover {
+    color: #000; /* Darker color on hover */
+  }
+
+  @media (max-width: 768px) {
+    footer {
+      padding: 15px;
+    }
+  
+    .footer-content h2 {
+      font-size: 1.2rem; /* Smaller font size on smaller screens */
+    }
+  
+    .footer-content p, .footer-content li {
+      font-size: 0.9rem; /* Smaller font size for text and list items on smaller screens */
+    }
+  }
 
