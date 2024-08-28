@@ -213,71 +213,83 @@ footer {
     align-items: center;
     padding: 20px;
     background-color: var(--backgroundColor); /* Light grey background color */
-  }
-  
-  hr {
+}
+
+hr {
     width: 80%;
     margin-bottom: 10px;
     border: none;
     border-top: 1px solid var(--darkGrey); /* Grey border for the hr */
-  }
-  
-  .footer-content {
+}
+
+.footer-content {
     display: flex;
-    flex-direction: column; /* Stack title and text vertically */
-    align-items: center;
+    flex-direction: row; /* Display items horizontally */
+    align-items: center; /* Center items vertically */
+    justify-content: center; /* Center items horizontally */
     text-align: center; /* Center text within the footer */
     width: 100%;
-  }
-  
-  .footer-content h2 {
+}
+
+.footer-content h2 {
     margin: 0;
     font-size: 1.5rem; /* Responsive font size */
     color: var(--blackBG); /* Dark grey text color */
-  }
+}
 
-  .footer-content p {
+.footer-content p {
     margin: 8px 0; /* Small margin between the title and text */
     font-size: 1rem; /* Base font size for the text */
     color: var(--blackBG); /* Medium grey text color */
-  }
-  
-  .footer-content ul {
+}
+
+.footer-content ul {
     list-style-type: none; /* Remove default bullets */
     padding: 0;
     margin: 10px 0 0; /* Margin above the list */
-  }
-  
-  .footer-content li {
-    margin: 5px 0; /* Space between list items */
+    display: flex;
+    flex-direction: row; /* Align list items horizontally */
+    align-items: center; /* Center items vertically */
+}
+
+.footer-content li {
+    margin: 0 15px; /* Space between list items */
     font-size: 1rem; /* Font size for list items */
     color: #666; /* Medium grey text color */
-    
-  }
-
+    display: flex;
+    align-items: center; /* Center content vertically */
+}
 
 .github-icon {
-    margin-top: 10px; /* Space above the icon */
+    margin-right: 10px; /* Space to the right of the icon */
     font-size: 1.5rem; /* Icon size */
     color: var(--blackBG); /* Dark grey color for the icon */
     text-decoration: none; /* Remove underline */
-  }
-  
-  .github-icon:hover {
+}
+
+.github-icon:hover {
     color: #000; /* Darker color on hover */
-  }
+}
 
-  @media (max-width: 768px) {
+@media (max-width: 768px) {
     footer {
-      padding: 15px;
+        padding: 15px;
     }
-  
-    .footer-content h2 {
-      font-size: 1.2rem; /* Smaller font size on smaller screens */
-    }
-  
-    .footer-content p, .footer-content li {
-      font-size: 0.9rem; /* Smaller font size for text and list items on smaller screens */
-    }
-  }
 
+    .footer-content h2 {
+        font-size: 1.2rem; /* Smaller font size on smaller screens */
+    }
+
+    .footer-content p, .footer-content li {
+        font-size: 0.9rem; /* Smaller font size for text and list items on smaller screens */
+    }
+
+    .footer-content ul {
+        flex-direction: column; /* Stack list items vertically on smaller screens */
+        align-items: flex-start; /* Align items to the start */
+    }
+
+    .footer-content li {
+        margin: 5px 0; /* Space between list items on smaller screens */
+    }
+}
