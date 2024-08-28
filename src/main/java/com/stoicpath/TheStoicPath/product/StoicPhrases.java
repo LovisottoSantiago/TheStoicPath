@@ -10,26 +10,21 @@ import java.util.Random;
 public class StoicPhrases {
 
     private final List<String> phrases = Arrays.asList(
-        "\"You have power over your mind.\"",
-        "\"The happiness of your life depends on thoughts.\"",
-        "\"Waste no more time arguing about virtue.\"",
-        "\"Think of the privilege to be alive.\"",
-        "\"The best revenge is to be unlike.\"",
-        "\"Do not waste time on what you cannot control.\"",
-        "\"Everything we hear is an opinion.\"",
-        "\"You are a citizen of the world.\"",
-        "\"Our life is what our thoughts make it.\"",
-        "\"He who lives in harmony with himself.\"",
-        "\"The soul becomes dyed with its thoughts.\"",
-        "\"It is not death that a man should fear.\"",
-        "\"The impediment to action advances action.\"",
-        "\"If you are pained, it is your estimate.\"",
-        "\"To live is the rarest thing in the world.\"",
-        "\"If you seek tranquillity, do not add.\"",
-        "\"The more we value things outside control.\"",
-        "\"Find one's passion to deal meaningfully with life.\"",
-        "\"What we do now echoes in eternity.\"",
-        "\"The universe is change; our life is thoughts.\""
+           "You have power over your mind.",
+           "The happiness of your life depends on thoughts.",
+           "Waste no more time arguing about virtue.",
+           "Think of the privilege to be alive.",
+           "The best revenge is to be unlike.",
+           "Do not waste time on what you cannot control.",
+           "Suffering is part of the human condition.",
+           "Fortune favors the bold, but the wise are prudent.",
+           "Control your desires to achieve tranquility.",
+           "The wise man is always content.",
+           "A man who overcomes himself is truly free.",
+           "To rule is to make difficult decisions.",
+           "Focus on what is within your control.",
+           "Life is a battle; fight it wisely.",
+           "Accept your fate and find peace."
     );
 
     private final Random random = new Random();

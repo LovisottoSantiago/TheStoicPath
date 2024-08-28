@@ -135,7 +135,18 @@ h1, h2 {
 #quote {
     color: var(--blackBG);
     font-size: 1.2em;
+    display: inline;
+    margin: 0 5px; /* Adds space between the text and the icons */
 }
+
+.fa-solid.fa-quote-left,
+.fa-solid.fa-quote-right {
+    color: var(--blackBG); /* You can adjust the color as needed */
+    font-size: 1.5em; /* Adjust icon size if needed */
+    vertical-align: middle; /* Align icons with text */
+    margin-bottom: 20px;
+}
+
 
 /* Paragraph Styles */
 p {

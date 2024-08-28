@@ -18,13 +18,22 @@
             <div class="menu-icon" onclick="toggleMenu()">
                 <i class="fa fa-book" aria-hidden="true"></i>
             </div>        
-            <ul id="navbar">
-                <li style="float:left"><i class="fa-solid fa-quote-left"></i><p id="quote" th:text="${phrase}"><i class="fa-solid fa-quote-left"></i></p></li>
-                <li style="float:right"><a href="#news">Help</a></li>
-                <li style="float:right"><a href="#contact">Blog</a></li>
-                <li style="float:right"><a class="active" href="#about">Quotes</a></li>
-                <li style="float:right"><a class="active" href="#about">About</a></li>
-            </ul>
+            
+        <ul id="navbar">
+          <li style="float:left">
+            <!-- Opening quote icon -->
+            <i class="fa-solid fa-quote-left"></i>
+            <!-- Quote text -->
+            <p id="quote" th:text="${phrase}"></p>
+            <!-- Closing quote icon -->
+            <i class="fa-solid fa-quote-right"></i>
+          </li>
+          <li style="float:right"><a href="#news">Help</a></li>
+          <li style="float:right"><a href="#contact">Blog</a></li>
+          <li style="float:right"><a class="active" href="#about">Quotes</a></li>
+          <li style="float:right"><a class="active" href="#about">About</a></li>
+        </ul>
+
         </nav>
 
         <script>
