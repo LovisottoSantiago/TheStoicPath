@@ -2,8 +2,8 @@
 <html xmlns:th="http://www.thymeleaf.org">
     <head>
         <meta charset="UTF-8">
-        <!-- <link href="/css/styles.css" rel="stylesheet" type="text/css"> -->
-        <link href="/src/main/resources/static/css/styles.css" rel="stylesheet" type="text/css">
+         <link href="/css/styles.css" rel="stylesheet" type="text/css"> 
+        <!-- <link href="/src/main/resources/static/css/styles.css" rel="stylesheet" type="text/css"> -->
 
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
@@ -19,7 +19,7 @@
                 <i class="fa fa-book" aria-hidden="true"></i>
             </div>        
             <ul id="navbar">
-                <li style="float:left"><p id="quote" th:text="${phrase}"></p></li>
+                <li style="float:left"><i class="fa-solid fa-quote-left"></i><p id="quote" th:text="${phrase}"><i class="fa-solid fa-quote-left"></i></p></li>
                 <li style="float:right"><a href="#news">Help</a></li>
                 <li style="float:right"><a href="#contact">Blog</a></li>
                 <li style="float:right"><a class="active" href="#about">Quotes</a></li>
@@ -50,8 +50,8 @@
                 <p>Here, we blend ancient Stoic philosophy with modern life, offering insights into mental health, journaling, happiness, productivity, and relationships. Join us on a journey to cultivate a more thoughtful and fulfilling life through the timeless wisdom of Stoicism.</p>
             </div>
             <div>
-                <!-- <img src="/assets/bg1.png" alt="Presentation"> -->
-                <img src="/src/main/resources/static/assets/bg1.png" alt="Presentation">
+                 <img src="/assets/bg1.png" alt="Presentation"> 
+                <!-- <img src="/src/main/resources/static/assets/bg1.png" alt="Presentation"> -->
             </div>
 
         </div>
@@ -74,20 +74,27 @@
             <h2>The Stoic Path</h2>
             <p>This is a personal project, feel free to visit the GitHub code.</p>
             <div class="footer-content">
-
               <ul>
                 <li>
                     <!-- GitHub Icon with Link -->
-                    <a href="https://github.com/yourusername" class="github-icon" target="_blank" aria-label="GitHub Profile">
+                    <a href="https://github.com/LovisottoSantiago" class="icon" target="_blank" aria-label="GitHub Profile">
+                        <i class="fa-solid fa-code"></i>
+                        <p>My Portfolio</p>
+                    </a>                    
+                </li>
+                <li>
+                    <!-- GitHub Icon with Link -->
+                    <a href="https://github.com/LovisottoSantiago" class="icon" target="_blank" aria-label="GitHub Profile">
                         <i class="fab fa-github"></i>
-                    </a>
-                    <p>Github Profile</p>
+                        <p>Github Profile</p>
+                    </a>                    
                 </li>
                 <li>
-                    <p>My Portfolio</p>
-                </li>
-                <li>
-                    <p>mymail@gmail.com</p>
+                    <!-- GitHub Icon with Link -->
+                    <a href="https://github.com/LovisottoSantiago" class="icon" target="_blank" aria-label="GitHub Profile">
+                        <i class="fa-solid fa-envelope"></i>
+                        <p>Contact Me!</p>
+                    </a>                    
                 </li>
               </ul>
             </div>
