@@ -53,7 +53,7 @@ ul.active {
 /* Regular Font Weight */
 @font-face {
     font-family: 'VisueltPro';    
-    src: url('/src/main/resources/static/fonts/VisueltPro-Regular.woff') format('woff');
+    src: url('/fonts/VisueltPro-Regular.woff') format('woff');
     font-weight: normal;
     font-style: normal;
 }
@@ -61,10 +61,11 @@ ul.active {
 /* Bold Font Weight */
 @font-face {
     font-family: 'VisueltPro';    
-    src: url('/src/main/resources/static/fonts/VisueltPro-Bold.woff') format('woff');
+    src: url('/fonts/VisueltPro-Bold.woff') format('woff');
     font-weight: bold;
     font-style: normal;
 }
+
 
 /* Regular Styles */
 body {
