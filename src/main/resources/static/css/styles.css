@@ -6,7 +6,7 @@
     --blackBG: #2d2d2d;
     --white: #ffffff;
     --softGold: #D4B483;
-    --darkGrey: #797979;
+    --darkGrey: #818181d7;
     --mutedBlue: #627D98;
     --earthyBrown: #8C746A;
     --radiusSize: 0rem;
@@ -184,7 +184,7 @@ p.bold {
     object-fit: cover;
     border-bottom-right-radius: var(--radiusSize);
     border-top-right-radius: var(--radiusSize);
-    width: 350px; /* Ensures the image doesn't get too large */
+    width: 300px; /* Ensures the image doesn't get too large */
     height: auto; /* Maintains the aspect ratio */
     margin-bottom: -0.3125rem;
     justify-self: center; /* Aligns the image to the right */
@@ -221,6 +221,7 @@ p.bold {
 footer {
     margin-top: 25rem;
     display: flex;
+    margin-bottom: -50px;
     flex-direction: column;
     align-items: center;
     padding: 20px;
@@ -245,6 +246,7 @@ footer p {
     margin: 8px 0; /* Small margin between the title and text */
     font-size:  1.1rem; /* Base font size for the text */
     color: var(--blackBG); /* Medium grey text color */
+    margin-bottom: 20px;
 }
 
 .footer-content {
@@ -276,7 +278,6 @@ footer p {
 .footer-content li {
     margin: 0 15px; /* Space between list items */
     font-size: 1rem; /* Font size for list items */
-    color: var(--darkGrey); /* Medium grey text color */
     display: flex;
     align-items: center; /* Center content vertically */
 }
@@ -284,7 +285,7 @@ footer p {
 .icon {
     margin-right: 10px; /* Space to the right of the icon */
     font-size: 1.5rem; /* Icon size */
-    color: var(--blackBG); /* Dark grey color for the icon */
+    color: var(--darkGrey); 
     text-decoration: none; /* Remove underline */
 }
 
