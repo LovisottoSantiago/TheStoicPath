@@ -126,10 +126,7 @@ h1, h2 {
 }
 
 #Subtitle {
-    max-width: 800px;
-    display: flex;
     margin: auto;
-    align-items: center;
     align-content: center;
 }
 
@@ -187,8 +184,6 @@ p.bold {
     width: 300px; /* Ensures the image doesn't get too large */
     height: auto; /* Maintains the aspect ratio */
     margin-bottom: -0.3125rem;
-    justify-self: center; /* Aligns the image to the right */
-    align-self: center; /* Centers the image vertically */
 }
 
 #MainNoteFirstDiv {
@@ -225,6 +220,7 @@ footer {
     flex-direction: column;
     align-items: center;
     padding: 20px;
+    margin-bottom: -3.125rem;
     background-color: var(--backgroundColor); /* Light grey background color */
 }
 
