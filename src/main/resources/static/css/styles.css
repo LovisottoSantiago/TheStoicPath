@@ -72,14 +72,11 @@ body {
     background: var(--backgroundColor);
     color: var(--black);
     text-align: center;
-    padding: 50px;
+    padding: 10px 50px 0 50px;
     font-family: VisueltPro, sans-serif;
-    font-weight: normal; /* Uses Regular weight */
+    font-weight: normal;
 }
 
-nav {
-    margin-top: -40px;
-}
 
 nav ul {
     list-style-type: none;
@@ -110,6 +107,10 @@ nav li a:hover {
 h1, h2 {
     font-family: 'VisueltPro', sans-serif;
     font-weight: bold; /* Uses Bold weight */
+}
+
+#MainTitle {
+    margin-top: -0.625rem;
 }
 
 #MainTitle h1 {
@@ -161,6 +162,9 @@ p.bold {
 
 .MainNote {
     width: 50rem;
+    border-style: solid;
+    border-color: var(--darkGrey);
+    border-width: thin;
     border-radius: var(--radiusSize);
     margin: auto;
     display: flex;
@@ -169,7 +173,12 @@ p.bold {
     justify-content: space-evenly;
     background: var(--whiteBG);
     text-align: left;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: border-color 0.4s ease; 
+
+}
+
+.MainNote:hover {
+    border-color: var(--mutedBlue);
 }
 
 .MainNote p {
@@ -183,7 +192,7 @@ p.bold {
     border-top-right-radius: var(--radiusSize);
     width: 300px; /* Ensures the image doesn't get too large */
     height: auto; /* Maintains the aspect ratio */
-    margin-bottom: -0.3125rem;
+    margin-bottom: -0.27rem;
 }
 
 #MainNoteFirstDiv {
@@ -213,38 +222,84 @@ p.bold {
 
 }
 
+/* MAIN SECTION */
+.MainContent {
+    display: flex;
+    justify-content: center;
+    padding: 1.5rem;
+}
+
+.Container-grid {
+    width: fit-content;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    row-gap: 1.5rem;
+    column-gap: 1.5rem;
+    align-items: center;
+    justify-content: center;
+    align-content: center;
+    justify-items: center;
+}
+
+.Chapter {
+    border-style: solid;
+    border-color: var(--darkGrey);
+    border-width: thin;
+    display: flex;
+    width: 24rem;
+    height: 25.5rem;
+    align-items: center;
+    justify-content: center;
+    transition: border-color 0.4s ease, box-shadow 0.4s ease, transform 0.3s ease; 
+}
+
+.Chapter:hover {
+    border-color: var(--mutedBlue);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transform: scale(1.02); /* Slightly scale up the element */
+}
+
+
+@media (max-width: 768px) {
+    .Container-grid {
+            grid-template-columns: repeat(1, 1fr);
+    }
+    
+    .Chapter {
+        width: 300px;
+    }    
+}
+
+
+/* FOOTER SECTION */
 footer {
-    margin-top: 25rem;
     display: flex;
     margin-bottom: -50px;
     flex-direction: column;
     align-items: center;
-    padding: 20px;
+    padding-bottom: 20px;
     margin-bottom: -3.125rem;
     background-color: var(--backgroundColor); /* Light grey background color */
 }
-
 footer hr {
     width: 80%;
+    margin-top: 0px;
     margin-bottom: 10px;
     border: none;
     border-top: 1px solid var(--darkGrey); /* Grey border for the hr */
 }
-
 footer h2 {
     margin: 0;
     font-size: 1.5rem; /* Responsive font size */
     color: var(--blackBG); /* Dark grey text color */
     margin-top: 5px;
 }
-
 footer p {
     margin: 8px 0; /* Small margin between the title and text */
     font-size:  1.1rem; /* Base font size for the text */
     color: var(--blackBG); /* Medium grey text color */
     margin-bottom: 20px;
 }
-
 .footer-content {
     display: flex;
     flex-direction: row; /* Display items horizontally */
@@ -255,13 +310,11 @@ footer p {
     width: 100%;
     height: auto;
 }
-
 .footer-content p {
     margin: 8px 0; /* Small margin between the title and text */
     font-size: 1rem; /* Base font size for the text */
     color: var(--blackBG); /* Medium grey text color */
 }
-
 .footer-content ul {    
     list-style-type: none; /* Remove default bullets */
     padding: 0;
@@ -270,24 +323,22 @@ footer p {
     flex-direction: row; /* Align list items horizontally */
     align-items: center; /* Center items vertically */
 }
-
 .footer-content li {
     margin: 0 15px; /* Space between list items */
     font-size: 1rem; /* Font size for list items */
     display: flex;
     align-items: center; /* Center content vertically */
 }
-
 .icon {
     margin-right: 10px; /* Space to the right of the icon */
     font-size: 1.5rem; /* Icon size */
     color: var(--darkGrey); 
     text-decoration: none; /* Remove underline */
 }
-
 .footer-content li :hover {
     color: #000; /* Darker color on hover */
 }
+
 
 @media (max-width: 768px) {
     footer {
