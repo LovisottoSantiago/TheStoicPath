@@ -204,16 +204,14 @@ p.bold {
 @media (max-width: 768px) { /* For phone sizes */
     .MainNote {
         flex-wrap: wrap;
-        width: -webkit-fill-available;
-        padding-left: 0;
+        width: fit-content;
         box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
         border-radius: var(--radiusSize);
     }    
     /*resize for phone*/
     .MainNote img{
-        width: 16rem;
+        width: 18.75rem;
         height: auto;
-        margin-bottom: 1rem;
         border-radius: var(--radiusSize);
     }
 
