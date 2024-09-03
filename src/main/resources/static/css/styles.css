@@ -207,6 +207,8 @@ p.bold {
         width: fit-content;
         box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
         border-radius: var(--radiusSize);
+        margin: auto;
+        align-items: center;
     }    
     /*resize for phone*/
     .MainNote img{
