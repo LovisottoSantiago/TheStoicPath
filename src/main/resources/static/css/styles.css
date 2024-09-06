@@ -203,12 +203,11 @@ p.bold {
 
 @media (max-width: 768px) { /* For phone sizes */
     .MainNote {
-        flex-wrap: wrap;
-        width: fit-content;
+        flex-wrap: wrap-reverse;
+        width: min-content;
         box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
         border-radius: var(--radiusSize);
-        margin: auto;
-        align-items: center;
+        margin: 0 auto;
     }    
     /*resize for phone*/
     .MainNote img{
@@ -218,7 +217,7 @@ p.bold {
     }
 
     .MainNote p{
-        margin-right: 0px;
+        text-align: -webkit-left;
     }
 
 }
