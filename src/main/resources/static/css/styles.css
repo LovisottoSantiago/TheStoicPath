@@ -391,3 +391,48 @@ footer p {
         display: grid;
     }
 }
+
+
+
+/*ABOUT PAGE */
+div#About-container {
+    display: grid;
+    grid-template-columns: 35rem 15rem;
+    justify-items: center;
+    align-content: center;
+    align-items: center;
+    justify-content: center;
+    column-gap: 25px;
+    margin-top: 2rem;
+    margin-bottom: 2.5rem;
+}
+
+div#About-container h2 {
+    margin-bottom: -7.5px;
+}
+
+div#About-txt {
+    text-align: left;
+}
+
+div#About-img {
+    background-color: burlywood;
+    width: 15rem;
+    display: grid;
+    height: 25rem;
+    align-items: center;
+    justify-content: center;
+    align-content: center;
+    justify-items: center;
+}
+
+
+
+@media (max-width: 768px) {
+
+    div#About-container {
+        display: flex;
+    }
+
+
+}

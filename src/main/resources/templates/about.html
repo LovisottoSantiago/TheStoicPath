@@ -1,10 +1,100 @@
 <!DOCTYPE html>
-<head>
-    <meta charset="UTF-8">
-    <link href="/css/styles.css" rel="stylesheet" type="text/css">
-    <title>about</title>
-</head>
-<body>
-    <p>This is the about page.</p>
-</body>
+<html xmlns:th="http://www.thymeleaf.org">
+    <head>
+        <meta charset="UTF-8">
+         <link th:href="@{/css/styles.css}" rel="stylesheet" type="text/css">
+        <!-- <link href="/src/main/resources/static/css/styles.css" rel="stylesheet" type="text/css"> -->
+
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>⚡</text></svg>">
+        <title>The Stoic Path!</title>
+    </head>
+    <body>
+        <nav>
+            <div class="menu-icon" onclick="toggleMenu()">
+                <i class="fa fa-book" aria-hidden="true"></i>
+            </div>        
+            
+        <ul id="navbar">
+          <li style="float:left">
+            <!-- Opening quote icon -->
+            <i class="fa-solid fa-quote-left"></i>
+            <!-- Quote text -->
+            <p id="quote" th:text="${phrase}"></p>
+            <!-- Closing quote icon -->
+            <i class="fa-solid fa-quote-right"></i>
+          </li>
+          <li style="float:right"><a href="#news">Help</a></li>
+          <li style="float:right"><a href="#contact">Blog</a></li>
+          <li style="float:right"><a class="active" href="#about">Quotes</a></li>
+          <li style="float:right"><a class="active" href="about">About</a></li>
+        </ul>
+
+        </nav>
+
+        <script>
+            function toggleMenu() {
+                var navbar = document.getElementById("navbar");
+                navbar.classList.toggle("active");
+            }
+        </script>    
+          
+        <div id="MainTitle">
+            <h1>The Stoic Path.</h1>
+            <hr id="TitleHr">
+        </div>
+
+        <div id="About-container">
+            <div id="About-txt">
+                <h2>Who?</h2>
+                <p>In publishing and graphic design, Lorem ipsum is a placeholder text commonly used to demonstrate the visual form of a document or a typeface without relying on meaningful content. Lorem ipsum may be used as a placeholder before the final copy is available. </p>
+                <h2>Why?</h2>
+                <p>In publishing and graphic design, Lorem ipsum is a placeholder text commonly used to demonstrate the visual form of a document or a typeface without relying on meaningful content. Lorem ipsum may be used as a placeholder before the final copy is available. </p>            
+            </div>
+            <div id="About-img">
+                <p>text</p>
+            </div>
+         </div>
+        
+        
+        
+
+        <footer>
+            <hr>
+            <h2>The Stoic Path</h2>
+            <p>This is a personal project, feel free to visit the GitHub code.</p>
+            <div class="footer-content">
+              <ul>
+                <li>
+                    <!-- GitHub Icon with Link -->
+                    <a href="https://github.com/LovisottoSantiago" class="icon" target="_blank" aria-label="GitHub Profile">
+                        <i class="fa-solid fa-code"></i>
+                        <p>My Portfolio</p>
+                    </a>                    
+                </li>
+                <li>
+                    <!-- GitHub Icon with Link -->
+                    <a href="https://github.com/LovisottoSantiago" class="icon" target="_blank" aria-label="GitHub Profile">
+                        <i class="fab fa-github"></i>
+                        <p>Github Profile</p>
+                    </a>                    
+                </li>
+                <li>
+                    <!-- GitHub Icon with Link -->
+                    <a href="https://github.com/LovisottoSantiago" class="icon" target="_blank" aria-label="GitHub Profile">
+                        <i class="fa-solid fa-envelope"></i>
+                        <p>Contact Me!</p>
+                    </a>                    
+                </li>
+              </ul>
+            </div>
+          </footer>          
+
+    </body>
+</html>
+
 
