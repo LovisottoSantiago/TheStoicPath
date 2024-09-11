@@ -45,9 +45,9 @@
     }
 }
 
-/* Display the navbar when the menu icon is clicked */
 ul.active {
     display: flex;
+    color: #000;
 }
 
 /* Regular Font Weight */
@@ -424,6 +424,7 @@ div#About-img {
     justify-content: center;
     align-content: center;
     justify-items: center;
+    object-fit: cover;
 }
 
 
@@ -432,6 +433,13 @@ div#About-img {
 
     div#About-container {
         display: flex;
+        flex-wrap: wrap;
+        width: 300px;
+    }
+
+    div#About-img {
+        width: 100%;
+        height: auto;
     }
 
 
