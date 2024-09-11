@@ -419,15 +419,15 @@ div#About-img {
     background-color: burlywood;
     width: 15rem;
     display: grid;
-    height: 25rem;
-    align-items: center;
-    justify-content: center;
+    height: 28rem;
     align-content: center;
     justify-items: center;
-    object-fit: cover;
 }
 
-
+div#About-img img{
+    height: 100%;
+    object-fit: cover;
+}
 
 @media (max-width: 768px) {
 
