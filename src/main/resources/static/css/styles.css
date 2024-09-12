@@ -426,6 +426,7 @@ div#About-img {
 
 div#About-img img{
     height: 100%;
+    width: 100%;
     object-fit: cover;
 }
 
@@ -435,11 +436,13 @@ div#About-img img{
         display: flex;
         flex-wrap: wrap;
         width: 300px;
+        margin-bottom: 20px;
     }
 
     div#About-img {
         width: 100%;
         height: auto;
+        margin-top: 20px;
     }
 
 
