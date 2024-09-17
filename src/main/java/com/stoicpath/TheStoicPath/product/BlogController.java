@@ -12,7 +12,7 @@ public class BlogController {
     private StoicPhrases stoicPhrases;
 
     @GetMapping("/blog")
-    public String home(Model model) {
+    public String blog(Model model) {
         try {
             model.addAttribute("phrase", stoicPhrases.getRandomPhrase());
         } catch (Exception e) {

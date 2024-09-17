@@ -2,8 +2,8 @@
 <html xmlns:th="http://www.thymeleaf.org">
     <head>
         <meta charset="UTF-8">
-         <link th:href="@{/css/styles.css}" rel="stylesheet" type="text/css">
-        <!-- <link href="/src/main/resources/static/css/styles.css" rel="stylesheet" type="text/css"> -->
+         <!-- <link th:href="@{/css/styles.css}" rel="stylesheet" type="text/css"> -->
+        <link href="/src/main/resources/static/css/styles.css" rel="stylesheet" type="text/css">
 
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
@@ -28,10 +28,10 @@
             <!-- Closing quote icon -->
             <i class="fa-solid fa-quote-right"></i>
           </li>
-          <li style="float:right"><a href="#news">Help</a></li>
-          <li style="float:right"><a href="blog">Blog</a></li>
+          <li style="float:right"><a href="#news" id="selected" href="blog">Help</a></li>
+          <li style="float:right"><a class="active">Blog</a></li>
           <li style="float:right"><a href="/">Home</a></li>
-          <li style="float:right"><a href="about" class="active" id="selected">About</a></li>
+          <li style="float:right"><a href="about">About</a></li>
         </ul>
 
         </nav>
@@ -48,22 +48,22 @@
             <hr id="TitleHr">
         </div>
 
-        <div id="About-container">
-            <div id="About-txt">
-                <h2>Who?</h2>
-                <p>In publishing and graphic design, Lorem ipsum is a placeholder text commonly used to demonstrate the visual form of a document or a typeface without relying on meaningful content. Lorem ipsum may be used as a placeholder before the final copy is available. </p>
-                <h2>Why?</h2>
-                <p>In publishing and graphic design, Lorem ipsum is a placeholder text commonly used to demonstrate the visual form of a document or a typeface without relying on meaningful content. Lorem ipsum may be used as a placeholder before the final copy is available. </p>      
-                <h2>Why?</h2>
-                <p>In publishing and graphic design, Lorem ipsum is a placeholder text commonly used to demonstrate the visual form of a document or a typeface without relying on meaningful content. Lorem ipsum may be used as a placeholder before the final copy is available. </p>                  
+        <div id="Subtitle">
+            <p>"Your ultimate resource for Stoicism, mental health, productivity and beyond."</p>
+        </div>
+
+
+
+        <section class="MainContent">
+            <div id="JsTest">
+                <p>This is for testing JS.</p>
+                <p id="displayB"></p>
+                <script>
+                    let b = 5;                    
+                    document.getElementById("displayB").textContent = b;
+                </script>
             </div>
-            <div id="About-img">
-                <img src="/assets/bg2.png" alt="About"> 
-            </div>
-         </div>
-        
-        
-        
+        </section>
 
         <footer>
             <hr>
@@ -98,5 +98,3 @@
 
     </body>
 </html>
-
-
