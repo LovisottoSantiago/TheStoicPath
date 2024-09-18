@@ -462,4 +462,11 @@ div#About-img img{
     border-style: solid;
     border-color: #000;
     margin-bottom: 20px;
+    justify-content: center;
+}
+
+button{
+    width: 200px;
+    height: 30px;
+    
 }

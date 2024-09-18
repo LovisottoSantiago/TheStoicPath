@@ -12,6 +12,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>⚡</text></svg>">
         <title>The Stoic Path!</title>
+
     </head>
     <body>
         <nav>
@@ -52,16 +53,48 @@
             <p>"Your ultimate resource for Stoicism, mental health, productivity and beyond."</p>
         </div>
 
-
+        <script>
+            document.addEventListener('DOMContentLoaded', () => {
+                const inputElement = document.getElementById('todoInput');
+                const addButton = document.getElementById('addButton');
+                const todoList = document.getElementById('todoList');
+    
+                // Constructor function for a to-do item
+                function TodoItem(name, isCompleted) {
+                    this.sentenceName = name;
+                    this.condition = isCompleted;
+                }
+    
+                TodoItem.prototype.createSentence = function() {
+                    const li = document.createElement('li');
+                    li.textContent = this.sentenceName;
+                    if (this.condition) {
+                        li.classList.add('completed');
+                    }
+                    todoList.appendChild(li);
+                };
+    
+                // Add event listener to the button
+                addButton.addEventListener('click', () => {
+                    const taskName = inputElement.value;
+                    if (taskName) {
+                        const newItem = new TodoItem(taskName, false);
+                        newItem.createSentence();
+                        inputElement.value = ''; // Clear the input field
+                    }
+                });
+            });
+        </script>
 
         <section class="MainContent">
             <div id="JsTest">
                 <p>This is for testing JS.</p>
-                <p id="displayB"></p>
-                <script>
-                    let b = 5;                    
-                    document.getElementById("displayB").textContent = b;
-                </script>
+                <input type="text" id="todoInput" placeholder="Agregar una nueva tarea">
+                <button id="addButton">Agregar</button>
+                <ul id="todoList"></ul>
+
+
+
             </div>
         </section>
 
@@ -96,5 +129,6 @@
             </div>
           </footer>          
 
+        <script src="test.js"></script>
     </body>
 </html>
