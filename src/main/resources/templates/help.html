@@ -53,49 +53,33 @@
             <p>"Your ultimate resource for Stoicism, mental health, productivity and beyond."</p>
         </div>
 
+        
         <script>
-            document.addEventListener('DOMContentLoaded', () => {
-                const inputElement = document.getElementById('todoInput');
-                const addButton = document.getElementById('addButton');
-                const todoList = document.getElementById('todoList');
-    
-                // Constructor function for a to-do item
-                function TodoItem(name, isCompleted) {
-                    this.sentenceName = name;
-                    this.condition = isCompleted;
+            function getInput() {
+                const inputTD = document.getElementById('inputTD').value; // Get the input value
+            
+                if (inputTD) { // Only add if the input is not empty
+                    const newItem = document.createElement('li'); // Create a new list item
+                    newItem.textContent = inputTD; // Set the text content to the input value
+                    document.getElementById('listTD').appendChild(newItem); // Append the new item to the list
+                    document.getElementById('inputTD').value = ''; // Clear the input field
                 }
-    
-                TodoItem.prototype.createSentence = function() {
-                    const li = document.createElement('li');
-                    li.textContent = this.sentenceName;
-                    if (this.condition) {
-                        li.classList.add('completed');
-                    }
-                    todoList.appendChild(li);
-                };
-    
-                // Add event listener to the button
-                addButton.addEventListener('click', () => {
-                    const taskName = inputElement.value;
-                    if (taskName) {
-                        const newItem = new TodoItem(taskName, false);
-                        newItem.createSentence();
-                        inputElement.value = ''; // Clear the input field
-                    }
-                });
-            });
-        </script>
+            }
+            </script>
+
 
         <section class="MainContent">
             <div id="JsTest">
                 <p>This is for testing JS.</p>
-                <input type="text" id="todoInput" placeholder="Agregar una nueva tarea">
-                <button id="addButton">Agregar</button>
-                <ul id="todoList"></ul>
+                <div class="JsInput">
+                    <input type="text" id="inputTD" placeholder="Ingresa texto: " on>
+                    <button type="button" id="addText" onclick="getInput()">X</button>
+                    <ul id="listTD">
 
-
-
+                    </ul>
+                </div>
             </div>
+
         </section>
 
         <footer>
