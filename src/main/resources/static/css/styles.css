@@ -506,3 +506,41 @@ div#About-img img{
     padding: 0; /* Removes padding */
 
 }
+
+.BlogMain {
+    display: flex;
+    gap: 50px;
+    height: 300px;
+    justify-content: center;
+    margin-bottom: 3rem;
+    margin-top: 3rem;
+    align-items: center;
+    justify-items: center;
+    flex-direction: row;
+}
+
+div#firstDiv {
+    height: auto;
+    width: 500px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+div#firstDiv h1 {
+    font-size: xxx-large;
+    font-style: oblique;
+    margin-bottom: 0px;
+}
+
+div#secondDiv {
+    background: antiquewhite;
+    display: flex;
+    width: 300px;
+    border-radius: 25px;
+    font-size: larger;
+    height: 100px;
+    justify-content: center;
+    align-items: center;
+}
