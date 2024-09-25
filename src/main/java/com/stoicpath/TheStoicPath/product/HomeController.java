@@ -11,8 +11,8 @@ public class HomeController {
     @Autowired
     private StoicPhrases stoicPhrases;
 
-    @GetMapping("/home")
-    public String home(Model model) {
+    @GetMapping("/")
+    public String blog(Model model) {
         try {
             model.addAttribute("phrase", stoicPhrases.getRandomPhrase());
         } catch (Exception e) {

@@ -535,12 +535,23 @@ div#firstDiv h1 {
 }
 
 div#secondDiv {
-    background: antiquewhite;
+    background: #faebd7;
     display: flex;
-    width: 300px;
-    border-radius: 25px;
+    width: auto;
+    height: auto;
+    padding: 10px 20px 10px 20px;
+    border-radius: 20px;
     font-size: larger;
-    height: 100px;
+    border-width: thin;
+    cursor: pointer; /* Change cursor to pointer */
+    border-style: solid;
+    border-color: var(--black);
+    transition: border-color 0.4s ease, box-shadow 0.4s ease;
     justify-content: center;
     align-items: center;
+}
+
+div#secondDiv:hover {
+    border-color: var(--blackBG);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
