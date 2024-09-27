@@ -517,6 +517,7 @@ div#About-img img{
     align-items: center;
     justify-items: center;
     flex-direction: row;
+    flex-wrap: wrap;
 }
 
 div#firstDiv {
